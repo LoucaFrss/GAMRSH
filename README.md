@@ -2,6 +2,6 @@
 ### A Golang async multi reverse shell handler
 
 
-Usage: 
+#### Usage: 
 
-`$GMRSH -h :port`
+`$GMRSH -host :host`
