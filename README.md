@@ -4,7 +4,7 @@
 
 #### Usage: 
 
-  $`GMRSH -host :host`
+  `$GMRSH -host :host`
 
 #### Example:
-  $`GMRSH -host :4444`
+  `$GMRSH -host :4444`
