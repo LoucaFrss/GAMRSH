@@ -15,7 +15,8 @@ import (
 
 var cList []net.Conn
 var nameList []string
-var host *string = flag.String("host", ":4444", "to accept")
+
+var host *string = flag.String("host", ":4444", "Adress and port to accept")
 var stdin *bufio.Reader = bufio.NewReader(os.Stdin)
 
 func main() {
@@ -36,7 +37,6 @@ func main() {
 			index, err := strconv.Atoi(string(command[len(command)-1]))
 			if err != nil {
 				fmt.Println("Please enter a valid number!")
-				fmt.Errorf(err.Error())
 			}
 			ch := make(chan bool)
 			setupLeaveHandler(ch)
@@ -50,6 +50,19 @@ func main() {
 			for i := range cList {
 				fmt.Printf("%d: %s (%s)\n", i, cList[i].RemoteAddr().String(), nameList[i])
 			}
+
+		} else if command == "help" {
+			fmt.Println(`
+		Commands:
+
+	l: list all the connected clients
+	
+	s: select a client
+		example:
+		s 0
+
+	help: show this message
+			`)
 
 		}
 
@@ -83,6 +96,7 @@ func listen() {
 	}
 }
 
+// connect with the selected client
 func handle(c net.Conn, ch chan bool) {
 	go stdout(c, ch)
 
