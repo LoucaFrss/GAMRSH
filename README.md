@@ -10,4 +10,4 @@
   `$ GAMRSH -host :4444`
   
 #### To build:
- `$ go build GAMRSH`
+ `$ go build GAMRSH.go`
