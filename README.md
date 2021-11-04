@@ -1,5 +1,5 @@
 # GAMRSH
-A Golang async multi reverse shell handler
+## A Golang async multi reverse shell handler
 
 
 Usage: 
