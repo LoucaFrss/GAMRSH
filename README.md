@@ -4,7 +4,10 @@
 
 #### Usage: 
 
-  `$GMRSH -host :host`
+  `$ GAMRSH -host :host`
 
 #### Example:
-  `$GMRSH -host :4444`
+  `$ GAMRSH -host :4444`
+  
+#### To build:
+ `$ go build GAMRSH`
