@@ -3,4 +3,5 @@ A Golang async multi reverse shell handler
 
 
 Usage: 
-$GMRSH -h :port
+
+`$GMRSH -h :port`
